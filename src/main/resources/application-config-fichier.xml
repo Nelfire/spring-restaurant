@@ -25,5 +25,5 @@ http://www.springframework.org/schema/util/spring-util.xsd">
 	
 	<bean id="menu" class="dev.ihm.Menu">
 		<constructor-arg name="scanner" ref="scanner"/>
-		<
+	</bean>
 </beans>
