@@ -42,8 +42,7 @@ class PlatDaoFichierTest {
 	}
 
 	/**
-	 * Ajouter un second test de la méthode ajouterPlat en vérifiant que la
-	 * sauvegarde s’est bien déroulée. Vérifier également qu’il n’y a qu’un seul
+	 * Ajouter un second test de la méthode ajouterPlat en vérifiant que la sauvegarde s’est bien déroulée. Vérifier également qu’il n’y a qu’un seul
 	 * enregistrement dans la liste des plats.
 	 * 
 	 */
