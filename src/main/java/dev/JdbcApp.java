@@ -9,6 +9,10 @@ import dev.config.DataSourceConfig;
 import dev.dao.PlatDaoJdbc;
 import dev.entite.Plat;
 
+/**
+ * @author 20-100
+ *
+ */
 public class JdbcApp {
 
 	private static final Logger LOGGER = Logger.getLogger(JdbcApp.class.getName());
@@ -25,7 +29,7 @@ public class JdbcApp {
 			List<Plat> plats = articleDao.listerPlats();
 
 			for (Plat pla : plats) {
-				LOGGER.info(pla.getNom());
+				LOGGER.info("Nom : " + pla.getNom() + ", Prix : " + pla.getPrixEnCentimesEuros());
 			}
 
 		}

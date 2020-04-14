@@ -7,6 +7,10 @@ import org.springframework.jdbc.core.RowMapper;
 
 import dev.entite.Plat;
 
+/**
+ * @author 20-100
+ *
+ */
 public class PlatRowMapper implements RowMapper<Plat> {
 
 	@Override

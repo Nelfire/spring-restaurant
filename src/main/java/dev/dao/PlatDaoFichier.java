@@ -16,6 +16,10 @@ import org.springframework.stereotype.Repository;
 import dev.entite.Plat;
 import dev.exception.PlatException;
 
+/**
+ * @author 20-100
+ *
+ */
 @Repository
 @Profile("PlatDaoFichier")
 public class PlatDaoFichier implements IPlatDao {

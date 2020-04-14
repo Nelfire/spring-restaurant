@@ -9,6 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
+/**
+ * @author 20-100
+ *
+ */
 @Configuration
 @ComponentScan({ "dev.dao" })
 @PropertySource("app.properties")

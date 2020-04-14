@@ -8,6 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
 
+/**
+ * @author 20-100
+ *
+ */
 @Repository
 @Profile("PlatDaoMemoire")
 public class PlatDaoMemoire implements IPlatDao {

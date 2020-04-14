@@ -10,6 +10,10 @@ import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
 
+/**
+ * @author 20-100
+ *
+ */
 @Repository
 @Profile("PlatDaoJdbc")
 public class PlatDaoJdbc implements IPlatDao {
@@ -31,7 +35,8 @@ public class PlatDaoJdbc implements IPlatDao {
 
 	@Override
 	public void ajouterPlat(String nomPlat, Integer prixPlat) {
-
+		String sqlAjouterPlat = "INSERT INTO PLAT (nom,prix) VALUE (?,?)";
+		jdbcTemplate.update(sqlAjouterPlat, nomPlat, prixPlat);
 	}
 
 }

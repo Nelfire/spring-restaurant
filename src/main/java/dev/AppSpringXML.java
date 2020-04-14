@@ -6,6 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import dev.ihm.Menu;
 
+/**
+ * @author 20-100
+ *
+ */
 public class AppSpringXML {
 
 	public static void main(String[] args) {

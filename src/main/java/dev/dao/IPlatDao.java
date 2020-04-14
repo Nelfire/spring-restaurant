@@ -1,10 +1,15 @@
 package dev.dao;
 
-import dev.entite.Plat;
-
 import java.util.List;
 
+import dev.entite.Plat;
+
+/**
+ * @author 20-100
+ *
+ */
 public interface IPlatDao {
-    List<Plat> listerPlats();
-    void ajouterPlat(String nomPlat, Integer prixPlat);
+	List<Plat> listerPlats();
+
+	void ajouterPlat(String nomPlat, Integer prixPlat);
 }
