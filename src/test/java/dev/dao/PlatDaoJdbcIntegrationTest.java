@@ -9,7 +9,6 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import dev.config.JdbcTestConfig;
-import dev.entite.Plat;
 
 /**
  * @author 20-100
@@ -43,13 +42,13 @@ public class PlatDaoJdbcIntegrationTest {
 //
 //		assertThat(platAjoute).isEqualTo(platRecupere);
 
-		Plat platAjoute = new Plat("plat 1", 1200);
-		platDaoJdbc.ajouterPlat(platAjoute.getNom(), platAjoute.getPrixEnCentimesEuros());
-
-		String sql = "SELECT * FROM plat where nom=?";
-		Plat platRecupere = jdbcTemplate.queryForObject(sql, new Object[] { "plat 1" }, new PlatRowMapper());
-
-		assertThat(platAjoute).isEqualTo(platRecupere);
+//		Plat platAjoute = new Plat("plat 1", 1200);
+//		platDaoJdbc.ajouterPlat(platAjoute.getNom(), platAjoute.getPrixEnCentimesEuros());
+//
+//		String sql = "SELECT * FROM plat where nom=?";
+//		Plat platRecupere = jdbcTemplate.queryForObject(sql, new Object[] { "plat 1" }, new PlatRowMapper());
+//
+//		assertThat(platAjoute).isEqualTo(platRecupere);
 
 	}
 }
