@@ -1,5 +1,7 @@
 package dev.entite;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -7,8 +9,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+/**
+ * @author 20-100
+ */
 @Entity
 @Table(name = "plat")
 public class Plat {
@@ -20,6 +28,26 @@ public class Plat {
 
 	@Column(name = "prix")
 	private Integer prixEnCentimesEuros;
+
+	@ManyToMany
+	@JoinTable(name = "plat_ingredient", joinColumns = @JoinColumn(name = "plat_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "ingredient_id", referencedColumnName = "id"))
+	private List<Ingredient> ingredients = new ArrayList<>();
+
+	/**
+	 * Constructeur
+	 * 
+	 * @param id
+	 * @param nom
+	 * @param prixEnCentimesEuros
+	 * @param ingredients
+	 */
+	public Plat(Integer id, String nom, Integer prixEnCentimesEuros, List<Ingredient> ingredients) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prixEnCentimesEuros = prixEnCentimesEuros;
+		this.ingredients = ingredients;
+	}
 
 	public Plat() {
 	}
@@ -59,4 +87,5 @@ public class Plat {
 	public int hashCode() {
 		return Objects.hash(nom);
 	}
+
 }

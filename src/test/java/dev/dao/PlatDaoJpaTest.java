@@ -12,11 +12,10 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import dev.config.DataSourceH2TestConfig;
 import dev.config.JpaTestConfig;
 import dev.entite.Plat;
 
-@SpringJUnitConfig({ JpaTestConfig.class, PlatDaoJpa.class, DataSourceH2TestConfig.class })
+@SpringJUnitConfig({ JpaTestConfig.class, PlatDaoJpa.class })
 @ActiveProfiles({ "PlatDaoJpa" })
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class PlatDaoJpaTest {

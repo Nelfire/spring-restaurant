@@ -9,6 +9,10 @@ import dev.dao.IPlatDao;
 import dev.entite.Plat;
 import dev.exception.PlatException;
 
+/**
+ * @author 20-100
+ *
+ */
 @Service
 @Profile("PlatServiceVersion2")
 public class PlatServiceVersion2 implements IPlatService {
