@@ -32,8 +32,10 @@ public class PlatRepositoryIntegrationTest {
 
 	List<Plat> listePlat;
 
-	// testFindAll() qui teste le fonctionnement de la méthode
-	// PlatRepository::findAll()
+	/*
+	 * testFindAll() qui teste le fonctionnement de la méthode
+	 * PlatRepository::findAll()
+	 */
 	@Test
 	void testFindAll() {
 
@@ -41,8 +43,11 @@ public class PlatRepositoryIntegrationTest {
 
 		assertThat(listePlat).isNotNull();
 	}
-	// • testFindAllSortAsc() qui teste le fonctionnement de la méthode
-	// PlatRepository::findAll(Sort) avec un tri ascendant par prix.
+
+	/*
+	 * • testFindAllSortAsc() qui teste le fonctionnement de la méthode
+	 * PlatRepository::findAll(Sort) avec un tri ascendant par prix.
+	 */
 
 	@Test
 	void testFindAllSortAsc() {
@@ -52,8 +57,10 @@ public class PlatRepositoryIntegrationTest {
 		assertThat(listePlat.get(0).getNom()).isEqualTo("Côte de boeuf");
 	}
 
-	// testFindAllSortDesc() qui teste le fonctionnement de la méthode
-	// PlatRepository::findAll(Sort) avec un tri descendant par prix.
+	/*
+	 * testFindAllSortDesc() qui teste le fonctionnement de la méthode
+	 * PlatRepository::findAll(Sort) avec un tri descendant par prix.
+	 */
 	@Test
 	void testFindAllSortDesc() {
 
@@ -78,23 +85,28 @@ public class PlatRepositoryIntegrationTest {
 		assertThat(platRepository.findAll(pageable).toList().size()).isEqualTo(2);
 	}
 
-	// testFindById() qui teste le fonctionnement de la méthode
-	// PlatRepository::findById.
+	/*
+	 * • testFindById() qui teste le fonctionnement de la méthode
+	 * PlatRepository::findById.
+	 */
 	@Test
 	void testFindById() {
 		assertThat(platRepository.findById(1).get().getNom()).isEqualTo("Magret de canard");
 	}
 
-	// testGetOne() qui teste le fonctionnement de la méthode
-	// PlatRepository::getOne.
+	/*
+	 * testGetOne() qui teste le fonctionnement de la méthode
+	 * PlatRepository::getOne.
+	 */
 	@Test
 	@Transactional
 	void testGetOne() {
 		assertThat(platRepository.getOne(1).getNom()).isEqualTo("Magret de canard");
 	}
 
-	// • testCount() qui teste le fonctionnement de la méthode
-	// PlatRepository::count.
+	/*
+	 * • testCount() qui teste le fonctionnement de la méthode PlatRepository::count
+	 */
 	@Test
 	void testGetCount() {
 		assertThat(platRepository.count()).isEqualTo(6);
@@ -135,7 +147,9 @@ public class PlatRepositoryIntegrationTest {
 		assertThat(platRepository.findByNomWithIngredients("Moules-frites")).hasSize(6);
 	}
 
-	// • testSave() qui teste le fonctionnement de la méthode PlatRepository::save
+	/*
+	 * • testSave() qui teste le fonctionnement de la méthode PlatRepository::save.
+	 */
 	@Test
 	void testSave() {
 		Plat p1 = new Plat("Kebab", 1500);
@@ -144,6 +158,12 @@ public class PlatRepositoryIntegrationTest {
 		// assertThat(platRepository.findAll()).contains(p1);
 	}
 
+	/*
+	 * • testChangerNom() qui teste le fonctionnement d’une méthode (à créer) de
+	 * l’interface PlatRepository qui permet modifier le nom d’un plat en
+	 * fournissant l’ancien et le nouveau nom.
+	 * 
+	 */
 	@Test
 	void testChangerNom() {
 
